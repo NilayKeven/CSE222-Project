@@ -1,0 +1,13 @@
+Ad No, Province, Country, Neighborhood, Status, Type, Count Of Room, Owner's Contact Email, Price
+1,Istanbul,Turkey,Kartal,Rent,Apartment,3+1,nkeven@gtu.edu.tr,100,1500
+2,Istanbul,Turkey,Sisli,Sale,Apartment,1+0,ykaraman@gtu.edu.tr,60,1000
+3,Istanbul,Turkey,Maltepe,Sale,House,2+1,ykaraman@gtu.edu.tr,6,850
+4,Istanbul,Turkey,Kartal,Rent,Apartment,3+1,nkeven@gtu.edu.tr,100,1250
+5,Istanbul,Turkey,Besiktas,Sale,Apartment,1+0,ykaraman@gtu.edu.tr,60,980
+6,Istanbul,Turkey,Tuzla,Sale,Apartment,1+0,ykaraman@gtu.edu.tr,6,400
+7,Istanbul,Turkey,Pendik,Rent,Apartment,3+1,nkeven@gtu.edu.tr,100,1500
+3,Istanbul,Turkey,Atasehir,Sale,House,4+1,ykaraman@gtu.edu.tr,60,3800
+28,Istanbul,Turkey,Bayrampasa,Sale,Apartment,1+0,ykaraman@gtu.edu.tr,6,500
+9,Istanbul,Turkey,Atakoy,Rent,Apartment,3+1,nkeven@gtu.edu.tr,100,3400
+10,Istanbul,Turkey,Florya,Sale,House,2+1,ykaraman@gtu.edu.tr,60,1350
+12,Istanbul,Turkey,Sisli,Sale,Apartment,1+0,ykaraman@gtu.edu.tr,6,150
