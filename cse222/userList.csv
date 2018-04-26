@@ -1,0 +1,6 @@
+User Type, Name, Surname, Phone Number, E-mail, Password
+com.bootstrappers.backend.Admin,Erdogan,Sevilgen,2620001,esevilgen@gtu.edu.tr,12345
+com.bootstrappers.backend.Member,Nilay,Keven,141044033,nkeven@gtu.edu.tr,adıyaman
+com.bootstrappers.backend.Member,Yagmur,Karaman,141044016,ykaraman@gtu.edu.tr,samsun
+com.bootstrappers.backend.Member,Fatiha,Beqirovski,151044091,fatihab@gtu.edu.tr,kosova
+com.bootstrappers.backend.Member,sdf,ds,dfs,dfs,dsf
