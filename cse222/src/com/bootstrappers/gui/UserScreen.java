@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,12 +22,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.net.URL;
+import java.util.*;
 
-public class UserScreen extends Application {
+public class UserScreen extends Application implements Initializable {
 
     private AdminLogin adminLoginScreen;
     private UserLogin userLoginScreen;
@@ -37,6 +36,11 @@ public class UserScreen extends Application {
     @FXML
     private TableView usertable;
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        fillTable();
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -45,23 +49,14 @@ public class UserScreen extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("UserScreen.fxml"));
         primaryStage.setTitle("User");
-        primaryStage.setScene(new Scene(root, 1200, 600));
+        primaryStage.setScene(new Scene(root, 1300, 600));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
 
-    private ObservableList<String> getCharacters(){
-        ObservableList<String> homes = FXCollections.observableArrayList();
-        //homes.add(new Home("asd", "asd", "asd", new Address("asdad", "as", "asd"), 1 ,
-         //       null, 1, 1));
-        homes.add("asd");
-        return homes;
-    }
-
-    @FXML
-    void applyFiltersSelected(ActionEvent event) throws Exception {
+    private void fillTable() {
         BootStrappers bs = new BootStrappers();
-        ArrayList<Home> homelist = bs.getHomeArrayList();
+        List<Home> homelist = bs.getHomeArrayList();
         ObservableList data = FXCollections.observableList(homelist);
         usertable.setItems(data);
 
@@ -81,27 +76,11 @@ public class UserScreen extends Application {
         col7.setCellValueFactory(new PropertyValueFactory("type"));
 
         usertable.getColumns().setAll(col1, col2, col3, col4, col5, col6, col7);
-        //usertable.setPrefWidth(700);
-        //usertable.setPrefHeight(700);
         usertable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
-    private void addColumn(TableView table, String row) {
-        TableColumn<Map, String> column = new TableColumn<>(row);
-        column.setMinWidth(130);
-        table.getColumns().add(column);
-    }
-
-    private void addRow(TableView table, String data) {
-        ObservableList<Map> allData = table.getItems();
-        Map<String, String> dataRow = new HashMap<>();
-        for (int j = 0; j < table.getColumns().size(); j++) {
-            System.out.println(j + "asd");
-            String mapKey = "Ad Number";
-            String value1 = data;
-            dataRow.put(mapKey, value1);
-        }
-        allData.add(dataRow);
-        table.setItems(allData);
+    @FXML
+    void applyFiltersSelected(ActionEvent event) throws Exception {
+        fillTable();
     }
 }
