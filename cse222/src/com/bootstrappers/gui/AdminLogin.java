@@ -44,11 +44,11 @@ public class AdminLogin extends Application {
     @FXML
     void adminLoginSelected(ActionEvent event) throws Exception {
         Admin m = new Admin(null, null, adminPassword.getText(), null, adminEmail.getText(), null);
-        if (!m.login(Main.bs.getUserArrayList())) {
+        if (m.login(Main.bs.getUserArrayList())) {
             Stage stage = (Stage) adminlogin.getScene().getWindow();
             adminScreen.start(stage);
         } else {
-            Main.showDialog((Stage) adminlogin.getScene().getWindow(), "Email kayıtlı değil!");
+            Main.showDialog((Stage) adminlogin.getScene().getWindow(), "Giriş başarısız!");
         }
     }
 }

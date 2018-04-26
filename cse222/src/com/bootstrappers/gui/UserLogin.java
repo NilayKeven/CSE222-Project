@@ -44,7 +44,7 @@ public class UserLogin extends Application {
     @FXML
     void userLoginSelected(ActionEvent event) throws Exception {
         Member m = new Member(null, null, loginPassword.getText(), null, loginEmail.getText(), null);
-        if (!m.login(Main.bs.getUserArrayList())) {
+        if (m.login(Main.bs.getUserArrayList())) {
             Stage stage = (Stage) userlogin.getScene().getWindow();
             userScreen.start(stage);
         } else {
